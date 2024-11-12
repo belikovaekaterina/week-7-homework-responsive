@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>verstka week 6</title> 
+
+<style>
+
+    html {
+        font-size: 100%;
+    }
+
+.grid.container {
+    display: grid; 
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 60% 40%;
+    height: 100vh; 
+        }
+
+        .header {
+            background-color: grey;
+            padding: 1rem;
+            text-align: center;
+        }
+    
+
+        .main-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+        }
+
+        .left-container {
+            background-color: #FFF9C4;
+            padding: 1rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr; 
+            gap: 10px; 
+            align-items: end;
+        }
+
+        .left-item {
+            background-color: #FFEB3B;
+            display: grid;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+            border: 1px solid #FFD600;
+            align-items: end;
+        }
+
+        .right-container {
+            background-color: lightseagreen;
+            padding: 1rem;
+        }
+
+
+        .left-item:nth-child(3) {
+            grid-column: span 2;
+        
+        }
+        .footer {
+            background-color: #ddd;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr); 
+            gap: 10px;
+            padding: 1rem;
+        }
+
+        .footer-item {
+            background-color: #bbb;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        @media (max-width: 1024px) {
+        .grid-container {
+            grid-template-columns: 1fr;
+        }
+
+        .main-content {
+            grid-template-columns: 1fr 1fr;
+        }
+        
+        .right-container {
+        grid-column: span 1;
+        min-width: 200px;
+        }
+
+        .footer {
+            grid-template-columns: repeat(2, 1fr); /* Две колонки в футере */
+        }
+    }
+
+    @media (max-width: 768px)
+    {
+        html {
+    font-size: 90%; 
+}
+        .header {
+            font-size: 1.2rem;
+            padding: 0.8rem;
+        }
+
+        .main-content {
+            grid-template-columns: 1fr;
+        }
+
+        .left-container {
+            grid-template-columns: 1fr;
+        }
+
+        .right-container {
+            grid-column: span 1;
+            min-width: 200px;
+        }
+
+        .footer {
+            grid-template-columns: 1fr; 
+        }
+
+        .footer-item {
+            padding: 0.8rem;
+            font-size: 0.9rem;
+        }
+    }
+
+
+</style>
+</head>
+<body>
+
+    <div class="grid-container">
+        <header class="header">
+            Навигация (шапка)
+        </header>
+
+        <main class="main-content">
+            <div class="left-container">
+                <div class="left-item">Элемент 1</div>
+                <div class="left-item">Элемент 2</div>
+                <div class="left-item">Элемент 3</div>
+            </div>
+
+            <div class="right-container">
+                Боковая область
+            </div>
+        </main>
+    
+    
+        <footer class="footer">
+                <div class="footer-item">Секция футера 1</div> 
+                <div class="footer-item">Секция футера 2</div> 
+                <div class="footer-item">Секция футера 3</div> 
+                <div class="footer-item">Секция футера 4</div> 
+            </div>
+    
+    
+    </body>
+    
+    
+    
+    </html>
